@@ -5,6 +5,20 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 .site-header {
   position: relative;
   background-color: #fff;
@@ -38,6 +52,10 @@
   font-family: "Space Mono", monospace;
   font-size: 16px;
   font-weight: 400;
+}
+.site-menu .current-menu-item > a,
+.site-menu .current-menu-ancestor > a {
+  font-weight: 700;
 }
 
 .menu-toggle {
@@ -155,6 +173,91 @@
     gap: 24px;
   }
 }
+body.contact-open {
+  overflow: hidden;
+}
+
+.contact-modal {
+  width: 600px;
+  max-width: calc(100% - 40px);
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  border: 5px solid #000;
+  background: #fff;
+  color: #000;
+}
+.contact-modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+.contact-modal__form {
+  max-width: 265px;
+  margin: 40px auto;
+}
+.contact-modal .wpcf7-form {
+  font-family: "Poppins", monospace;
+  font-weight: 500;
+}
+.contact-modal .wpcf7-form label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.contact-modal .wpcf7-form input:not([type=submit]),
+.contact-modal .wpcf7-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #b8bbc2;
+  border-radius: 8px;
+}
+.contact-modal .wpcf7-form textarea {
+  height: 260px;
+  resize: none;
+}
+.contact-modal .wpcf7-form input[type=submit] {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 4px;
+  background: #d8d8d8;
+  color: #000;
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.contact-banner {
+  padding-top: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 64px;
+  font-style: italic;
+  line-height: 1;
+}
+.contact-banner div {
+  width: -moz-max-content;
+  width: max-content;
+}
+.contact-banner div:first-child {
+  transform: translateX(-140px);
+}
+.contact-banner div:last-child {
+  transform: translateX(-100px);
+}
+
+@media (max-width: 768px) {
+  .contact-banner {
+    font-size: 44px;
+  }
+  .contact-modal__form {
+    margin-block: 30px;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   min-height: 100%;

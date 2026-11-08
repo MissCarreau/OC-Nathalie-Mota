@@ -31,5 +31,15 @@ function motaphoto_enqueue_assets() {
             true
         );
     }
+    if (file_exists($directory . '/js/scripts.js')) {
+        wp_enqueue_script(
+            'motaphoto-contact',
+            $uri . '/js/scripts.js',
+            [],
+            filemtime($directory . '/js/scripts.js'),
+            true
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'motaphoto_enqueue_assets');
+

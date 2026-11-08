@@ -1,6 +1,13 @@
 @use "fonts";
 @use "header";
 @use "footer";
+@use "contact";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 html,
 body {

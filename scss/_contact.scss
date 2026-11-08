@@ -1,0 +1,88 @@
+body.contact-open {
+    overflow: hidden;
+}
+
+.contact-modal {
+    width: 600px;
+    max-width: calc(100% - 40px);
+    max-height: calc(100dvh - 40px);
+    margin: auto;
+    padding: 0;
+    overflow-y: auto;
+    border: 5px solid #000;
+    background: #fff;
+    color: #000;
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    &__form {
+        max-width: 265px;
+        margin: 40px auto;
+    }
+
+    .wpcf7-form {
+        font-family: "Poppins", monospace;
+        font-weight: 500;
+
+        label {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        input:not([type="submit"]),
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #b8bbc2;
+            border-radius: 8px;
+        }
+
+        textarea {
+            height: 260px;
+            resize: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            border-radius: 4px;
+            background: #d8d8d8;
+            color: #000;
+            font-family: "Space Mono", monospace;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+}
+
+.contact-banner {
+    padding-top: 10px;
+    font-family: "Space Mono", monospace;
+    font-size: 64px;
+    font-style: italic;
+    line-height: 1;
+    div {
+        width: max-content;
+
+        &:first-child {
+            transform: translateX(-140px);
+        }
+
+        &:last-child {
+            transform: translateX(-100px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-banner {
+        font-size: 44px;
+    }
+
+    .contact-modal__form {
+        margin-block: 30px;
+    }
+}
