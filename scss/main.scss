@@ -1,0 +1,17 @@
+@use "fonts";
+@use "header";
+@use "footer";
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}

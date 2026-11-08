@@ -1,0 +1,47 @@
+.site-footer {
+    margin-top: auto;
+    border-top: 1px solid #000;
+    background: #fff;
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        padding: 10px 20px;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.footer-menu {
+    display: flex;
+    gap: 70px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer__inner {
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 20px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
